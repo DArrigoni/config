@@ -59,7 +59,7 @@ let vimclojure#ParenRainbow = 1 " Rainbow parentheses'!
 if has('gui_running')
 
   " for Gui versions of vim. see :help guioptions for more info
-  colorscheme monokai_modified
+  colorscheme monokai
   set guioptions=aAce
   set guifont=Menlo\ Regular\ for\ Powerline:h11
 

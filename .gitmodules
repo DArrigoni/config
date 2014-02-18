@@ -122,10 +122,6 @@ url = https://github.com/sjl/badwolf.git
 path = dotfiles/.vim/bundle/theme-darkspectrum
 url = https://github.com/vim-scripts/darkspectrum.git
 
-[submodule "dotfiles/.vim/bundle/theme-molokai"]
-path = dotfiles/.vim/bundle/theme-molokai
-url = https://github.com/tomasr/molokai
-
 [submodule "dotfiles/.vim/bundle/plugin-taglist"]
 path = dotfiles/.vim/bundle/plugin-taglist
 url = https://github.com/vim-scripts/taglist.vim
