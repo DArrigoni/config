@@ -52,10 +52,6 @@ let g:Powerline_symbols = 'fancy'
 
 python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/")
 
-" initialize pathogen and load all the plugins in .vim/bundle
-runtime bundle/plugin-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 " Settings for VimClojure
 let vimclojure#HighlightBuiltins = 1 " Highlight Clojure's builtins
 let vimclojure#ParenRainbow = 1 " Rainbow parentheses'!

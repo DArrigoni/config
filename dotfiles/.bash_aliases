@@ -7,7 +7,7 @@ alias :e=vim
 alias less=$PAGER
 
 # ls with showall, colors, and /'s after directories
-alias ls="ls -AFhxX --color --group-directories-first "
+alias ls="ls -hxX --color --group-directories-first "
 #alias ll="ls -A -XSx -l"
 alias ll='ls -alF'
 alias lk="ls -gGhLXS"
@@ -52,3 +52,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [[ -n `command -v ack-grep` ]]; then
   alias ack='ack-grep'
 fi
+
+# Bundle aliases
+alias be='bundle exec'
