@@ -39,18 +39,14 @@ let g:vimwiki_list_ignore_newline = 0
 let wiki_1 = {}
 let wiki_1.nested_syntaxes = {'python': 'python', 'ruby': 'ruby', 'rails': 'rails', 'yaml': 'yml'}
 
-" configure IndentGuides plugin
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_start_level = 3
-let g:indent_guides_guide_size  = 1
-autocmd! VimEnter,Colorscheme * hi IndentGuidesOdd ctermbg=236 guibg=#303030 | hi IndentGuidesEven ctermbg=239 guibg=#505050
-autocmd BufRead * IndentGuidesEnable
-"autocmd! VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=123 guibg=#880055
-
 " configure Powerline, enable fancy symbols
 let g:Powerline_symbols = 'fancy'
 
 python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/")
+
+" initialize pathogen and load all the plugins in .vim/bundle
+runtime bundle/plugin-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 
 " Settings for VimClojure
 let vimclojure#HighlightBuiltins = 1 " Highlight Clojure's builtins
@@ -187,6 +183,9 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
+" haml
+au BufRead,BufNewFile *.hamlc set ft=haml
 
 " disable wordwrap when looking at CSVs
 autocmd BufRead *.csv,*.csv*,<csv> set nowrap
